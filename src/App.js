@@ -9,10 +9,15 @@ function App() {
     { id: 3, completed: false, task: 'купить сыр' }
   ]
 
+  function toggleToDo(id) {
+    console.log(id);
+
+  }
+
   return (
     <div className='wrapper'>
       <h1>React app</h1>
-      <ToDoList todoList={todo}></ToDoList>
+      <ToDoList todoList={todo} onToggle={toggleToDo}></ToDoList>
     </div>
   );
 }
